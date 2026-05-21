@@ -13,7 +13,7 @@ async def chat_endpoint(websocket: WebSocket, client_id: str):
             messages = data.get("messages", [])
 
             if not messages:
-                await manager.send_error(client_id, "No hay mensajes")
+                await manager.send_error(client_id, "No messages here :c")
                 continue
 
             await stream_response(

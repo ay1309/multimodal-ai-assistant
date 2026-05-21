@@ -9,13 +9,13 @@ router = APIRouter()
 @router.post("/api/analyze-image")
 async def analyze_image(
     file: UploadFile = File(...),
-    prompt: str = Form(default="Describe esta imagen detalladamente.")
+    prompt: str = Form(default="Describe this image in detail.")
 ):
     image_bytes = await file.read()
     message = build_vision_message(image_bytes, file.content_type, prompt)
 
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-haiku-4-5-20251001",
         max_tokens=int(os.environ.get("MAX_TOKENS", 2048)),
         system=build_system_prompt(),
         messages=[message],

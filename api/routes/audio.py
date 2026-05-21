@@ -12,7 +12,7 @@ async def transcribe_and_respond(file: UploadFile = File(...)):
     message = build_audio_message(audio_bytes, file.content_type)
 
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-haiku-4-5-20251001",
         max_tokens=int(os.environ.get("MAX_TOKENS", 2048)),
         system=build_system_prompt(),
         messages=[message],
