@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimodal AI-Assistant by AFMB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">M</div>
+        <h1>Multimodal Assistant by AFMB</h1>
+      </div>
+      <span class="status offline" id="status">Connecting</span>
+    </header>
+
+    <main class="chat-window" id="chat-window">
+      <div class="welcome">
+        <p>Hi! What can I help you with today? :D </p>
+        <p>I'm multimodal! so you can give text, images, and audio to analyze!</p>
+      </div>
+    </main>
+
+    <footer class="input-area">
+      <label class="icon-btn" title="Subir imagen">
+        <i>📎</i>
+        <input type="file" id="image-input" accept="image/*" hidden>
+      </label>
+      <label class="icon-btn" title="Subir audio">
+        <i>🎙️</i>
+        <input type="file" id="audio-input" accept="audio/*" hidden>
+      </label>
+      <textarea id="user-input" placeholder="Write a message and check out the agent" rows="1"></textarea>
+      <button id="send-btn">Send</button>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
