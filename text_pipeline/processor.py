@@ -14,7 +14,7 @@ Be clear, concise, and helpful."""
 
 async def stream_response(messages: list, on_chunk, client_id: str):
     with client.messages.stream(
-        model="claude-3-5-sonnet-20241022",
+        model="claude-haiku-4-5-20251001",
         max_tokens=int(os.environ.get("MAX_TOKENS", 2048)),
         system=build_system_prompt(),
         messages=messages,
