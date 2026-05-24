@@ -10,6 +10,7 @@ Production-ready conversational AI assistant with real-time streaming, vision an
 This consists of a full-stack AI assistant that goes beyond only basic chat (just text). Users can send text, upload images for visual analysis, and submit audio files for a transcription and analysis of content — all processed by Claude (Haiku) in real time through a persistent WebSocket connection (full-duplex).
 
 *Key technical decisions*:
+
     - WebSocket over REST for chat: This enables true token-by-token streaming
     - Single model for all modalities (Text, video, audio): Claude (claude-haiku-4-5-20251001) 
     - Stateless backend with in-memory history on the client: Alowys to scale horizontally without session storage 
