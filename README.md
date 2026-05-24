@@ -17,17 +17,19 @@ This consists of a full-stack AI assistant that goes beyond only basic chat (jus
 ---
 
 ## Features
-    - *Live streaming*: Responses appear token-by-token via WebSocket, not all at once
 
-    - *Vision analysis*: The user can upload any valid image file (JPG, PNG, WebP, GIF) and ask about it
+    - Live streaming*: Responses appear token-by-token via WebSocket, not all at once
 
-    - *Audio transcription*: Valid audio files can be uploaded for transcription to obtain an intelligent response or analysis of the information contained on the recording
+    - Vision analysis*: The user can upload any valid image file (JPG, PNG, WebP, GIF) and ask about it
 
-    - *Conversation memory*: Full chat history is sent with every request so Claude remembers context
+    - Audio transcription*: Valid audio files can be uploaded for transcription to obtain an intelligent response or analysis of the information contained on the recording
 
-    - *Auto-documentation*: FastAPI generates interactive API documentation (Can be visualized at \docs)
+    - Conversation memory*: Full chat history is sent with every request so Claude remembers context
 
-    - *Cloud deploy ready*: The assisant is ready to be deployed using Docker with the command *docker compose up*
+    - Auto-documentation*: FastAPI generates interactive API documentation (Can be visualized at \docs)
+
+    - Cloud deploy ready*: The assisant is ready to be deployed using Docker with the command *docker compose up*
+    
 
 Sample test chat that demonstrate the memory use and contextualized responses (Img below)
 <img src="sample_images/imgMemory.jpeg" width="400"/>    
